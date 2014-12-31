@@ -1,0 +1,11 @@
+{
+  "name": "active-visitors",
+  "version": "0.0.1",
+  "description": "Display active visitors",
+  "dependencies": {
+    "socket.io": "^1.2.1"
+  },
+  "devDependencies": {
+    "express": "^4.10.6"
+  }
+}
