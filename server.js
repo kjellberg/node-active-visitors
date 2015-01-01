@@ -1,4 +1,3 @@
-var PORT = process.ENV.PORT || 8080;
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
@@ -6,11 +5,9 @@ var io = require('socket.io')(http);
 // Store connected users in a variable.
 var activeVisitors = 0;
 
+app.set('port', (process.env.PORT || 5000))
 app.use(require('express').static('public'));
 
-app.get('/', function(req, res) {
-	res.sendFile( __dirname + '/public/index.html');
-});
 
 io.on('connection', function(socket){
 
@@ -26,4 +23,6 @@ io.on('connection', function(socket){
 
 });
 
-http.listen(PORT);
+http.listen(app.get('port'), function() {
+  console.log("Node app is running at port:" + app.get('port'))
+})
