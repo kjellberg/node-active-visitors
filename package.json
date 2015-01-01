@@ -1,11 +1,15 @@
 {
-  "name": "active-visitors",
-  "version": "0.0.1",
-  "description": "Display active visitors",
-  "dependencies": {
-    "socket.io": "^1.2.1"
-  },
-  "devDependencies": {
-    "express": "^4.10.6"
-  }
+	"name": "active-visitors",
+	"version": "0.0.2",
+	"description": "Display active visitors",
+	"engines": {
+		"node": ">=0.10.0",
+		"npm": ">=1.3"
+	},
+	"dependencies": {
+		"socket.io": "^1.2.1"
+	},
+	"devDependencies": {
+		"express": "^4.10.6"
+	}
 }

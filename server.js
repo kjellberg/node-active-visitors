@@ -1,3 +1,4 @@
+var PORT = process.ENV.PORT || 8080;
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
@@ -25,6 +26,4 @@ io.on('connection', function(socket){
 
 });
 
-http.listen(3000, function() {
-	console.log("Server started.");
-});
+http.listen(PORT);
